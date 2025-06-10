@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1 {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: green;
+}
+
+h1 span {
+    color: orange;
+}
+
+#para {
+    font-style: inherit;
+    background-color: white;
+
+    padding: 20px;
+    color: black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.footer-container {
+    margin-top: 30px;
+    text-align: center;
+}
+.header p{
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.header p a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+.header p a:hover{
+    color: orange;
+}
+.header{
+    display: flex;
+    justify-content: end;
+}
+.head-content h1{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 50px;
+    color: green;
+}
+.head-content h1 span{
+    color: orange;
+}

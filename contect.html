@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contect.css" />
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar">
+      <!-- <div class="logo">MyWebsite</div> -->
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Form Section -->
+  <div class="contact-container">
+    <form class="contact-form">
+      <h2>Contact Us</h2>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+      <span class="nameerrer" style="color: red;font-size: 12px;">Name must contains only letter</span>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="emaile" placeholder="Your email" required />
+      <span class="emailerrer" style="color: red;font-size: 12px;">Phone number must contains only 10 digits</span>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+      <button type="submit" id="submit">Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    var submit = document.getElementById("submit")
+
+    submit.addEventListener("click", function () {
+      event.preventDefault()
+
+      var saran = /^[a-zA+Z]+$/
+      var emailadd = /^[a-zA-Z0-9]+@gmail.com/
+
+      var name = document.getElementById("name")
+      var email = document.getElementById("email")
+
+      if (saran.test(name.value) == false) {
+        document.querySelector(".nameerrer").style.display = "inline"
+      }
+      else {
+        document.querySelector(".nameerrer").style.display = "none"
+      }
+      if (emailadd.test(email.value) == false) {
+        document.querySelector(".emailerrer").style.display = "inline"
+      }
+      else {
+        document.querySelector(".emailerrer").style.display = "none"
+      }
+
+
+    })
+  </script>
+
+</body>
+
+</html>
